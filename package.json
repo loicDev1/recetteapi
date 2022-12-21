@@ -1,11 +1,11 @@
 {
-  "name": "Cuisine Api",
+  "name": "CuisineApi",
   "version": "1.0.0",
   "description": "cuisine api is a resfull api who is provide data for cook food",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "keywords": [
     "API",

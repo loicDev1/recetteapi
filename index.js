@@ -28,29 +28,29 @@ require('dotenv').config()
 const app = express()
 
 // authorisation des requettes Cors sur L'api
-app.use((request, response, next) => {
-    response.header("Access-Control-Allow-Origin", "*");
-    response.header("Access-Control-Allow-Headers", "Origin , X-Requested-With , Content-Type , Accept");
-    next();
-});
+// app.use((request, response, next) => {
+//     response.header("Access-Control-Allow-Origin", "*");
+//     response.header("Access-Control-Allow-Headers", "Origin , X-Requested-With , Content-Type , Accept");
+//     next();
+// });
 
-// configuration du repertoire racine des fichiers statiques
-app.use('/', express.static('public'))
+// // configuration du repertoire racine des fichiers statiques
+// app.use('/', express.static('public'))
 
-// configuration du bodyParser pour parser le corps des requetes
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+// // configuration du bodyParser pour parser le corps des requetes
+// app.use(bodyParser.urlencoded({ extended: false }))
+// app.use(bodyParser.json())
 
-//configuration du cookie parser
-app.use(cookieParser())
+// //configuration du cookie parser
+// app.use(cookieParser())
 
-// configuration du middleWare de session
-app.use(session({
-    secret: "Betterlidays",
-    reSave: "false",
-    saveUnitialized: true,
-    Cookie: { secure: false },
-}))
+// // configuration du middleWare de session
+// app.use(session({
+//     secret: "Betterlidays",
+//     reSave: "false",
+//     saveUnitialized: true,
+//     Cookie: { secure: false },
+// }))
 
 // creation du port d'écoute du serveur
 const Port = process.env.PORT || 5000
