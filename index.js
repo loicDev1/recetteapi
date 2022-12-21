@@ -56,7 +56,7 @@ app.use(session({
 const Port = process.env.PORT || 5000
 
 app.get('/' , (req , res) => {
-    res.status(200).json({message : 'hello to my recetteApi'})
+    res.status(200).json({message : 'welcome to my recetteApi'})
 })
 
 app.post('/login' , login)
